@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM </title>
+
+    <style>
+
+        body { 
+          background-color: rgb(68, 125, 199);
+          color: white;
+          font: normal 18pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com o DOM!</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong> DOM </strong> em JavaScript. </p>
+    <div id="msg">Clique em mim!</div> <!-- name="msg"-->
+
+    <script>
+
+        var corpo = window.document.body;
+        //var d = document.getElementsByName('msg')[0];
+        var d = window.document.querySelector('div#msg'); // o 'id' é representado por '#' e a class é representado por '.'
+        d.style.background = 'blue'; 
+
+
+      //  corpo.style.background = 'black';
+/*
+      var d = document.getElementById('msg');
+      d.style.background = 'green';
+      d.innerText = ('Estou aguardando');
+*/
+        var p1 = window.document.getElementsByTagName("p")[1];
+         // ele pega o nome da tag em HTML tipo aqui tá pegando a tag <p> paragafo; <p> </p>
+         //document.getElementById()pega o elemento pelo id  que criamos na div id="topo"
+         //document.getElementByName() takes the element by a name that was created in the tag; name="tipo" 
+         //document.getElementsbyClassName() takes the elements by a class name; class="tipo"
+
+       // p1.style.color = 'blue';
+        //window.document.write('está escrito assim: ' + p1.innerText);
+
+
+       // window.alert(p1.innerText);
+        document.write(p1.innerHTML);
+
+    </script>
+    
+</body>
+</html>
