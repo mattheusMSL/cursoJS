@@ -20,18 +20,14 @@
 </head>
 <body>
     
-     <div id="area" > <!-- id="area"  onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+     <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
     aaaaaaa.....
     </div>
   
-
     <script>
-        var a = window.document.getElementById('area');  // cria um variável para a div  
-        a.addEventListener('click', clicar); // adiciona o onclick evento a div
-        a.addEventListener('mouseenter', entrar); // adiciona o evento mouseenter para a div
-        a.addEventListener('mouseout', sair); // adiciona o evento mouseout para a div
+        var a = window.document.getElementById('area');  // cria um variável para a div 
 
-        function clicar() { // function clicar 
+         clicar = () => { // function clicar 
             a.innerText = 'Clicou!';
             a.style.background = 'red';
         }
@@ -44,8 +40,11 @@
             a.innerText = 'Saiu!';
             a.style.background ='green';
 
-        }
 
+        a.addEventListener('click', clicar); // adiciona o onclick evento a div
+        a.addEventListener('mouseenter', entrar); // adiciona o evento mouseenter para a div
+        a.addEventListener('mouseout', sair); // adiciona o evento mouseout para a div
+        }
 
     </script>
 </body>

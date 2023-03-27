@@ -1,7 +1,8 @@
    
-   const hour = document.getElementById("demo");
+  const hour = document.getElementById("demo");
 
-   function horario() {
-    hour.innerHTML = Date();
+    function horario() {
+     hour.innerHTML = Date();
     
 }
+

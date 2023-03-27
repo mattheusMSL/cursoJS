@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiplication</title>
 </head>
 
 <body>
 
+    <div id="sum"></div>
     <script>
 
         // USE "parseInt(n) or Number.parseFloat() to force and string to be the type of Number, it basically means to convert and String to Number(also may use "Number()" to let JS choose which type of number it is )
@@ -17,10 +18,26 @@
 
         // to covert it number to string use String(n) or n.toString()
 
-        var n1 = Number.parseInt(window.prompt("Type a number: "));
-        var n2 = Number(window.prompt("Type another number: "));
-        var s = n1 + n2;
-        window.alert("The mutiplication between these two number is: " + s);
+        // var n1 = Number.parseInt(window.prompt("Type a number: "));
+        // var n2 = Number(window.prompt("Type another number: "));
+        // var s = n1 + n2;
+        // window.alert("The multiplication between these two number is: " + s);
+
+       
+        const print = document.querySelector('sum');
+
+        function multiplay(){
+            
+            let number1 = Number(window.prompt("Type a number, please!"));
+            let number2 = Number.parseInt(window.prompt("Type another number, please!"));
+            const sum = number1 + number2;
+
+            window.alert(`The multiplication between ${number1} and ${number2} is ${sum}`);
+            print.innerHTML = `The multiplication between ${number1} and ${number2} is ${sum}`;
+
+        }
+
+        multiplay();
 
 
     </script>
